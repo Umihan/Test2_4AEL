@@ -9,16 +9,18 @@ namespace test4AEL
     {
         static void Main(string[] args)
         {
-            Titel("TITEL DER ANWENDUNG");
+            Titel("TITEL DER ANWENDUNG", ConsoleColor.Red);
+            Console.WriteLine("ttttt");
             Console.ReadKey();
         }
 
-        static void Titel(string titel)
+        static void Titel(string titel, ConsoleColor textfarbe)
         {
             int breite = Console.WindowWidth;
             int textlen = titel.Length;
-
+            ConsoleColor aktTextFarbe = Console.ForegroundColor;    // aktuelle Farbe speichern
             Console.Clear();
+            Console.ForegroundColor = textfarbe;
             for (int i = 0; i < Console.WindowWidth; i++)
             {
                 Console.Write("*");
@@ -32,7 +34,7 @@ namespace test4AEL
             {
                 Console.Write("*");
             }
-
+            Console.ForegroundColor = aktTextFarbe;
         }
 
     }

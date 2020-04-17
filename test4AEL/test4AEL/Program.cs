@@ -11,6 +11,8 @@ namespace test4AEL
         {
             Titel("TITEL DER ANWENDUNG", ConsoleColor.Red);
             Console.WriteLine("ttttt");
+            Menu();
+
             Console.ReadKey();
         }
 
@@ -36,6 +38,15 @@ namespace test4AEL
             }
             Console.ForegroundColor = aktTextFarbe;
         }
-
+        /// <summary>
+        /// Ausgabe eines Auswahlmenüs
+        /// </summary>
+        static void Menu()
+        {
+            Console.WriteLine("\n1) 10 -> 2");
+            Console.WriteLine("2) 10 -> Hex");
+            Console.WriteLine("3) 2  -> 10");
+            Console.WriteLine("\n Bitte einen Menüpunkt auswählen");
+        }
     }
 }

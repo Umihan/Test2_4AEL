@@ -11,15 +11,9 @@ namespace test4AEL
         {
             Titel("TITEL DER ANWENDUNG", ConsoleColor.Red);
             Console.WriteLine("ttttt");
-            string binZahl = BinaerZahlEinlesen();
-
             Console.ReadKey();
         }
-        /// <summary>
-        /// Gibt einen Text formatiert als Titel aus
-        /// </summary>
-        /// <param name="titel"> Text der ausgegeben werden soll</param>
-        /// <param name="textfarbe">Consolecolor TextFarbe des Titels</param>
+
         static void Titel(string titel, ConsoleColor textfarbe)
         {
             int breite = Console.WindowWidth;
@@ -42,15 +36,6 @@ namespace test4AEL
             }
             Console.ForegroundColor = aktTextFarbe;
         }
-        /// <summary>
-        /// Einlesen einer Binärzahl
-        /// </summary>
-        /// <returns>String mit nur Nullen und Einsen</returns>
-        static string BinaerZahlEinlesen()
-        {
-            Console.WriteLine("Bitte Binärzahl eingeben (0/1): ");
-            string input = Console.ReadLine();
-            return input;
-        }
+
     }
 }
